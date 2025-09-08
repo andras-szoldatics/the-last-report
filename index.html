@@ -13,17 +13,17 @@
 
 @font-face {
     font-family: 'FontUI';
-    src: url('https://andras-szoldatics.github.io/the-last-report/assets/fonts/Orbitron-Bold.ttf');
+    src: url('https://andras-szoldatics.github.io/the-final-report/assets/fonts/Orbitron-Bold.ttf');
 }
 
 @font-face {
     font-family: 'FontText';
-    src: url('https://andras-szoldatics.github.io/the-last-report/assets/fonts/OpenDyslexic-Regular.otf');
+    src: url('https://andras-szoldatics.github.io/the-final-report/assets/fonts/OpenDyslexic-Regular.otf');
 }
 
 @font-face {
   	font-family: 'FontTerminal';
-  	src: url('https://andras-szoldatics.github.io/the-last-report/assets/fonts/SpaceMono-Bold.ttf');
+  	src: url('https://andras-szoldatics.github.io/the-final-report/assets/fonts/SpaceMono-Bold.ttf');
 }
 
 /* color palette for UI */
@@ -88,6 +88,7 @@ tw-sidebar {
   	bottom: 0rem;
   	right: 0rem;
   	position: fixed;
+  	text-align: left;
   	width: 4rem;
 }
 
@@ -98,21 +99,25 @@ tw-sidebar tw-icon {
   	font-size: 4rem;
   	line-height: 6rem;
   	opacity: 1.0 !important;
+  	user-select: none;
 }
 
 tw-sidebar tw-icon:hover {
   	color: var(--text-bright) !important;
   	opacity: 1.0 !important;
+  	user-select: none;
 }
 
 tw-link {
   	all: inherit;
   	cursor: pointer;
+  	user-select: none;
 }
 
 tw-link:hover {
   	all: inherit;
   	cursor: pointer;
+  	user-select: none;
 }
 
 tw-hook[name=linktext] tw-link {
@@ -241,25 +246,24 @@ This is a really long paragraph. — Lorem ipsum dolor sit amet, consectetur adi
 
 |log1&gt;[&gt; INITIALIZING MAINFRAME&lt;br&gt;
 &gt; WAITING FOR AUTHENTICATION ...&lt;br&gt;]
-|entry1&gt;[(v6m-print: &quot;: &quot;)(force-input: bind _entry1, _user)&lt;br&gt;]
+|entry1&gt;[(v6m-print: &quot;USER: &quot;)(force-input: bind _entry1, _user)&lt;br&gt;]
 |entry2&gt;[]
 |log2&gt;[]
 
 (event: when _entry1&#39;s length is &gt;= _user&#39;s length) [
-(replace: ?entry1)[: (v6m-print: _user)&lt;br&gt;]
-(replace: ?entry2)[(v6m-print: &quot;: &quot;)(force-input: bind _entry2, _password)&lt;br&gt;]
+(replace: ?entry1)[USER: (v6m-print: _user)&lt;br&gt;]
+(replace: ?entry2)[(v6m-print: &quot;PASS: &quot;)(force-input: bind _entry2, _password)&lt;br&gt;]
 ]
 
 (event: when _entry2&#39;s length is &gt;= _password&#39;s length) [
-(replace: ?entry2)[: (v6m-print: _password)&lt;br&gt;]
+(replace: ?entry2)[PASS: (v6m-print: _password)&lt;br&gt;]
 (replace: ?log2)[&gt; WELCOME ANALYST, COMP-CON CONFIGURED FOR YOUR INPUT]
 ]
 
 ]&lt;br&gt;&lt;br&gt; &lt;!-- console --&gt;
 
 = title test =&lt;br&gt;&lt;br&gt;
-|button&gt;[=
-[[Test Title]]</tw-passagedata><tw-passagedata pid="2" name="Test Title" tags="title" position="300,300" size="100,100">{ &lt;!-- some simple test --&gt;
+|button&gt;[(link-goto: &quot;Test Title&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Test Title" tags="title" position="300,300" size="100,100">{ &lt;!-- some simple test --&gt;
 
 |gametitle&gt;[
 |main&gt;[The Final Report]&lt;br&gt;
