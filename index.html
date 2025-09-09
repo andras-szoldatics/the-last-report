@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Style Test.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Style Test" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="82F91A54-4311-4D01-B458-DB6DC6D2AC60" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* font families for UI */
+<tw-storydata name="Style Test" startnode="2" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="82F91A54-4311-4D01-B458-DB6DC6D2AC60" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* font families for UI */
 
 @font-face {
     font-family: 'FontUI';
@@ -206,27 +206,392 @@ tw-expression[name=force-input]  {
 
 tw-expression[name=force-input] input {
   	all: unset;
-  	border-width: 1px;
-  	border-bottom-style: dashed;
-  	width: calc(100% - 3rem) !important;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="title" color="green"></tw-tag><tw-tag name="header" color="red"></tw-tag><tw-passagedata pid="1" name="Test Passage" tags="" position="100,300" size="100,100">{=
-(set: _user to &quot;d30ffa01-d404-49ec-b8e9-d5e25bd8864c&quot;)
-(set: _password to &quot;dr3am.the-DREAM&lt;&lt;&lt;SLP&quot;)
+  	border-bottom: 0.0625rem dashed;
+  	width: calc(100% - 12rem) !important;
+}
+
+#nonogram {
+  	display: inline-block;
+}
+
+#nonogram table {
+  	border-collapse: collapse;
+}
+
+#nonogram td {
+  	border: 1px dotted;
+  	border-color: var(--text-terminal);
+  	cursor: pointer;
+  	height: 1.5rem;
+  	padding: 0rem;
+  	user-select: none;
+  	width: 1.5rem;
+}
+
+#nonogram td.active {
+  	background: var(--text-terminal);
+}
+
+#nonogram td.inactive {
+  	line-height: 1.375rem;
+  	text-align: center;
+}
+
+#nonogram td.inactive::after {
+  	content: '\00B7';
+}
+
+#nonogram th {
+  	user-select: none;
+}
+
+#nonogram th.row {
+  	font-weight: normal;
+    padding: 0rem 0.5rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#nonogram th span.clue {
+  	cursor: pointer;
+}
+
+#nonogram th span.disable {
+    opacity: 0.2;
+}
+
+#nonogram th.row span.sep {
+  	padding: 0rem 0.25rem;
+}
+
+#nonogram th.col {
+  	font-weight: normal;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#nonogram th.col span {
+    display: block;
+}
+
+#nonogram th.col span.sep {
+    line-height: 0.5rem;
+}
+
+#nonogram .thick-right {
+  	border-right: 0.125rem dotted var(--text-terminal);
+}
+
+#nonogram .thick-bottom {
+  	border-bottom: 0.125rem dotted var(--text-terminal);
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.nng = {};
+
+window.nng1 = {
+    table: {
+        width: 10,
+        height: 10,
+    },
+    clues: {
+        top: [
+            [1, 1],
+            [2, 3],
+            [2, 4, 2],
+            [1, 1],
+            [1, 1],
+            [1, 1],
+            [2, 3],
+            [2, 4, 2],
+            [3, 3],
+            [1, 1],
+        ],
+        left: [
+            [1, 1],
+            [2, 3],
+            [2, 4, 2],
+            [1, 2],
+            [1, 1],
+            [1, 1],
+            [2, 3],
+            [2, 4, 2],
+            [2, 3],
+            [1, 1],
+        ],
+    },
+};
+
+window.nng2 = {
+    table: {
+        width: 30,
+        height: 20,
+    },
+    clues: {
+        top: [
+            [7, 5],
+            [2, 3, 7],
+            [1, 2, 10],
+            [2, 3, 11],
+            [4, 3, 4],
+            [11, 2],
+            [4, 2, 3, 1],
+            [4, 3, 3, 1],
+            [5, 2, 3, 1],
+            [8, 3, 1],
+            [4, 1, 1, 3, 1],
+            [3, 3, 2, 2],
+            [4, 2, 1, 1, 4],
+            [6, 3, 4],
+            [1, 3, 2, 4],
+            [2, 3, 3],
+            [4, 3],
+            [2, 4],
+            [1, 1, 6],
+            [2, 1, 10],
+            [1, 2, 1, 11],
+            [1, 3, 1, 1, 4],
+            [2, 2, 3, 2],
+            [2, 2, 1, 1, 1],
+            [4, 3, 1, 1],
+            [1, 3, 1, 1],
+            [1, 5],
+            [1, 1],
+            [2, 1],
+            [3],
+        ],
+        left: [
+            [6],
+            [9],
+            [11, 3],
+            [13, 1, 2],
+            [2, 2, 2, 4, 2, 2],
+            [1, 1, 1, 1, 1, 1, 1, 2, 2, 1],
+            [1, 2, 1, 3, 4, 1, 1, 1],
+            [1, 13, 1, 3, 3],
+            [1, 3, 1, 1, 1, 2, 2],
+            [2, 3, 1, 1, 1, 1, 6, 1],
+            [4, 2, 1, 1, 2, 3, 1],
+            [3, 2, 2, 3, 6, 1],
+            [2, 9, 2, 1, 1, 2],
+            [3, 5, 1, 8],
+            [4, 3, 2, 3, 1],
+            [6, 2, 8],
+            [15, 6],
+            [5, 10],
+            [4, 9],
+            [4, 8],
+        ],
+    },
+};
+
+window.nng.flipClue = function (event) {
+    event.preventDefault();
+
+    const span = event.target;
+    span.classList.toggle("disable");
+};
+
+window.nng.leftClick = function (event) {
+    event.preventDefault();
+
+    const cell = event.target;
+    if (cell.classList.contains("active")) {
+        cell.classList.remove("active");
+    } else {
+        cell.classList.remove("inactive");
+        cell.classList.add("active");
+    }
+};
+
+window.nng.rightClick = function (event) {
+    event.preventDefault();
+
+    const cell = event.target;
+    if (cell.classList.contains("inactive")) {
+        cell.classList.remove("inactive");
+    } else {
+        cell.classList.remove("active");
+        cell.classList.add("inactive");
+    }
+};
+
+window.nng.init = function (puzzle) {
+    const container = document.getElementById("nonogram");
+    const config = puzzle === 1 ? window.nng1 : window.nng2;
+
+    // create basic table
+    const table = document.createElement("table");
+    const headerRow = document.createElement("tr");
+
+    // calculate index
+    let ix = 1;
+
+    // add top header with clues
+    for (let c = 0; c < config.table.width; c++) {
+        const clueHeader = document.createElement("th");
+        clueHeader.classList.add("col");
+
+        // add thicker borders
+        if (c % 5 === 4 && c + 1 < config.table.width) {
+            clueHeader.classList.add("thick-right");
+        }
+
+        const entries = config.clues.top[c];
+        if (Array.isArray(entries) === false) {
+            continue;
+        }
+
+        // add each clue as separate element
+        entries.forEach((entry, index) => {
+            // add separator
+            if (index !== 0) {
+                const separator = document.createElement("span");
+                separator.classList.add("sep");
+                separator.innerHTML = "&middot;";
+                clueHeader.appendChild(separator);
+            }
+
+            const span = document.createElement("span");
+            span.classList.add("clue");
+            span.textContent = entry;
+
+            // add events
+            span.addEventListener("click", window.nng.flipClue);
+
+            clueHeader.appendChild(span);
+        });
+        headerRow.appendChild(clueHeader);
+    }
+    table.appendChild(headerRow);
+
+    // add corner piece
+    const cornerCell = document.createElement("th");
+    cornerCell.classList.add("corner");
+    headerRow.appendChild(cornerCell);
+
+    for (let r = 0; r < config.table.height; r++) {
+        const row = document.createElement("tr");
+
+        // add the normal cells
+        for (let c = 0; c < config.table.width; c++) {
+            const cell = document.createElement("td");
+            cell.dataset.ix = ix;
+
+            // add thicker borders
+            if (r % 5 === 4 && r + 1 < config.table.height) {
+                cell.classList.add("thick-bottom");
+            }
+            if (c % 5 === 4 && c + 1 < config.table.width) {
+                cell.classList.add("thick-right");
+            }
+
+            // add events
+            cell.addEventListener("click", window.nng.leftClick);
+            cell.addEventListener("contextmenu", window.nng.rightClick);
+
+            // add to table
+            row.appendChild(cell);
+            ix += 1;
+        }
+
+        // add header with clues
+        const cluesHeader = document.createElement("th");
+        cluesHeader.classList.add("row");
+        const entries = config.clues.left[r];
+        if (Array.isArray(entries) === false) {
+            continue;
+        }
+
+        // add thicker borders
+        if (r % 5 === 4 && r + 1 < config.table.height) {
+            cluesHeader.classList.add("thick-bottom");
+        }
+
+        // add each clue as seperate element
+        entries.forEach((entry, index) => {
+            // add separator
+            if (index !== 0) {
+                const separator = document.createElement("span");
+                separator.classList.add("sep");
+                separator.innerHTML = "&middot;";
+                cluesHeader.appendChild(separator);
+            }
+
+            const span = document.createElement("span");
+            span.classList.add("clue");
+            span.textContent = entry;
+
+            // add events
+            span.addEventListener("click", window.nng.flipClue);
+
+            cluesHeader.appendChild(span);
+        });
+
+        row.appendChild(cluesHeader);
+
+        table.appendChild(row);
+    }
+
+    while (container.firstChild) {
+        container.firstChild.remove();
+    }
+    container.appendChild(table);
+};
+
+window.nng.export = function () {
+    const container = document.getElementById("nonogram");
+
+    const table = container.querySelector("table");
+
+    if (!table) {
+        return "";
+    }
+
+    let state = "";
+
+    const cells = table.querySelectorAll("td");
+
+    cells.forEach((cell) => {
+        if (cell.classList.contains("active")) {
+            state += "1";
+        } else if (cell.classList.contains("inactive")) {
+            state += "0";
+        } else {
+            state += " ";
+        }
+    });
+
+    return state;
+};
+
+window.nng.import = function (state) {
+    const container = document.getElementById("nonogram");
+
+    const table = container.querySelector("table");
+
+    if (!table) {
+        return undefined;
+    }
+
+    const cells = table.querySelectorAll("td");
+
+    cells.forEach((cell) => {
+        let s = state[cell.dataset.ix - 1];
+
+        cell.classList.remove("active");
+
+        cell.classList.remove("inactive");
+
+        if (s === "1") {
+            cell.classList.add("active");
+        } else if (s === "0") {
+            cell.classList.add("inactive");
+        }
+    });
+};
+</script><tw-tag name="title" color="green"></tw-tag><tw-tag name="header" color="red"></tw-tag><tw-tag name="startup" color="yellow"></tw-tag><tw-tag name="footer" color="blue"></tw-tag><tw-tag name="no-header" color="red"></tw-tag><tw-tag name="module-macros" color="yellow"></tw-tag><tw-tag name="macros" color="yellow"></tw-tag><tw-passagedata pid="1" name="First Test" tags="" position="300,200" size="100,100">{ &lt;!-- story --&gt;
+
 (set: _entry1 to &quot;&quot;)
 (set: _entry2 to &quot;&quot;)
-
-|gameheader&gt;[
-=|
-&lt;==
-the Unremarkable Analyst
-
-|=
-==&gt;
-phase 0 — day 0
-
-|==|
-&lt;==
-]
 
 This is some basic paragraph.&lt;br&gt;&lt;br&gt;
 
@@ -238,32 +603,9 @@ This is a really long paragraph. — Lorem ipsum dolor sit amet, consectetur adi
 |linktext&gt;[(link-repeat: &quot;link&quot;)[(append: ?linktext)[+]]]
 |linkninja&gt;[(link-repeat: &quot;linkninja&quot;)[(append: ?linkninja)[+]]]&lt;br&gt;&lt;br&gt;
 |button&gt;[(link-repeat: &quot;button&quot;)[(append: ?button)[+]]]
-|buttonoff&gt;[(link-repeat: &quot;buttonoff&quot;)[(append: ?buttonoff)[+]]]&lt;br&gt;&lt;br&gt;
+|buttonoff&gt;[(link-repeat: &quot;buttonoff&quot;)[(append: ?buttonoff)[+]]]&lt;br&gt;
 
-= console test =&lt;br&gt;&lt;br&gt;
-
-|console&gt;[
-
-|log1&gt;[&gt; INITIALIZING MAINFRAME&lt;br&gt;
-&gt; WAITING FOR AUTHENTICATION ...&lt;br&gt;]
-|entry1&gt;[(v6m-print: &quot;USER: &quot;)(force-input: bind _entry1, _user)&lt;br&gt;]
-|entry2&gt;[]
-|log2&gt;[]
-
-(event: when _entry1&#39;s length is &gt;= _user&#39;s length) [
-(replace: ?entry1)[USER: (v6m-print: _user)&lt;br&gt;]
-(replace: ?entry2)[(v6m-print: &quot;PASS: &quot;)(force-input: bind _entry2, _password)&lt;br&gt;]
-]
-
-(event: when _entry2&#39;s length is &gt;= _password&#39;s length) [
-(replace: ?entry2)[PASS: (v6m-print: _password)&lt;br&gt;]
-(replace: ?log2)[&gt; WELCOME ANALYST, COMP-CON CONFIGURED FOR YOUR INPUT]
-]
-
-]&lt;br&gt;&lt;br&gt; &lt;!-- console --&gt;
-
-= title test =&lt;br&gt;&lt;br&gt;
-|button&gt;[(link-goto: &quot;Test Title&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Test Title" tags="title" position="300,300" size="100,100">{ &lt;!-- some simple test --&gt;
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="2" name="Title Screen" tags="title no-header" position="100,200" size="100,100">{ &lt;!-- game menu --&gt;
 
 |gametitle&gt;[
 |main&gt;[The Final Report]&lt;br&gt;
@@ -271,14 +613,277 @@ This is a really long paragraph. — Lorem ipsum dolor sit amet, consectetur adi
 ]&lt;br&gt;&lt;br&gt;
 
 |gamemenu&gt;[
-|button&gt;[(link-repeat: &quot;start-new-investigation&quot;)[]]&lt;br&gt;&lt;br&gt;
-|buttonoff&gt;[(link-repeat: &quot;load-old-investigation&quot;)[]]&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;Start Investigation&quot;)[
+($new_analyst:)
+($new_investigation:)
+(go-to: &quot;First Test&quot;))]
+]&lt;br&gt;&lt;br&gt;
+
+|buttonoff&gt;[(link-repeat: &quot;Load from Checkpoint&quot;)[]]&lt;br&gt;&lt;br&gt;
+
 |button&gt;[(link-repeat: &quot;version-and-credits&quot;)[]]&lt;br&gt;&lt;br&gt;
+
 ]
 
-}</tw-passagedata><tw-passagedata pid="3" name="module-header" tags="header" position="200,100" size="100,100">{
+} &lt;!-- game menu --&gt;</tw-passagedata><tw-passagedata pid="3" name="module-header" tags="header" position="200,0" size="100,100">{
+
+(if: (passage:)&#39;s tags does not contain &quot;no-header&quot;) [
+
+|gameheader&gt;[
+=|
+&lt;==
+the $ability Analyst
+
+|=
+==&gt;
+(nth: $date_phase, ...$phase_names) — day $date_day
+
+|==|
+&lt;==
+]
+
+]
+
+}</tw-passagedata><tw-passagedata pid="4" name="module-startup" tags="startup" position="0,0" size="100,100">{
+
+&lt;!-- include custom macros --&gt;
+(display: &quot;macros-date&quot;)
+(display: &quot;macros-dice&quot;)
+(display: &quot;macros-story&quot;)
+(display: &quot;macros-timing&quot;)
+
+&lt;!-- set basic phase --&gt;
+(set: $date_phase to 1)
+(set: $save to &quot;&quot;)
+
+}</tw-passagedata><tw-passagedata pid="5" name="module-footer" tags="footer" position="300,0" size="100,100">{ &lt;!-- sidebar config --&gt;
+
 (replace: ?sidebar)[(icon-restart:)(icon-fullscreen:)]
-}</tw-passagedata></tw-storydata>
+
+} &lt;!-- sidebar config --&gt;
+---
+|button&gt;[[[1st-&gt;First Test]]] |button&gt;[[[2nd-&gt;Second Test]]] |button&gt;[[[3rd-&gt;Third Test]]] |button&gt;[[[4th-&gt;Fourth Test]]] |button&gt;[[[5th-&gt;Fifth Test]]] |button&gt;[[[6th-&gt;Sixth Test]]]</tw-passagedata><tw-passagedata pid="6" name="macros-story" tags="macros" position="0,600" size="100,100">{ &lt;!-- story macros --&gt;
+
+(set: $new_analyst to (macro: [
+&lt;!-- ability --&gt;
+(set: $ability to &quot;Unremarkable&quot;)
+
+&lt;!-- terminal data --&gt;
+(set: $term_user to &quot;analyst-d30ffa01@intel.ucs &quot;)
+(set: $term_pass to &quot;123456 &quot;)
+
+(output:)[]
+]))
+
+(set: $new_investigation to (macro: [
+&lt;!-- dates --&gt;
+(set: $date_day to 0)
+(set: $date_phase to 5)
+
+&lt;!-- humint --&gt;
+(set: $humint to (dm:))
+
+&lt;!-- sigint --&gt;
+(set: $sigint to (dm:))
+
+(output:)[]
+]))
+
+} &lt;!-- story macros --&gt;</tw-passagedata><tw-passagedata pid="7" name="Second Test" tags="" position="500,200" size="100,100">{ &lt;!-- story --&gt;
+
+= delay test =&lt;br&gt;&lt;br&gt;
+
+|derp&gt;[]&lt;br&gt;&lt;br&gt;
+
+($replace_after: 4000ms, &quot;derp&quot;, [derp-derp])
+
+|button&gt;[(link-repeat: &quot;!!!&quot;)[
+($append_after: 500ms, &quot;derp&quot;, [ !!!])
+]]&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="8" name="Third Test" tags="" position="700,200" size="100,100">{ &lt;!-- story --&gt;
+
+= console test =&lt;br&gt;&lt;br&gt;
+
+|console&gt;[
+(set: _entry1 to &quot;&quot;)
+(set: _entry2 to &quot;&quot;)
+
+|log1&gt;[&gt; INITIALIZING MAINFRAME&lt;br&gt;
+&gt; WAITING FOR AUTHENTICATION ...&lt;br&gt;]
+|entry1&gt;[(v6m-print: &quot;USER: &quot;)(force-input: bind _entry1, $term_user)&lt;br&gt;]
+|entry2&gt;[]
+|log2&gt;[]
+
+(event: when _entry1&#39;s length is &gt;= ($term_user)&#39;s length) [
+(replace: ?entry1)[USER: (v6m-print: $term_user)&lt;br&gt;]
+(replace: ?entry2)[(v6m-print: &quot;PASS: &quot;)(force-input: bind _entry2, $term_pass)&lt;br&gt;]
+]
+
+(event: when _entry2&#39;s length is &gt;=($term_pass)&#39;s length) [
+(replace: ?entry2)[PASS: (v6m-print: $term_pass)&lt;br&gt;]
+(replace: ?log2)[&gt; WELCOME ANALYST, COMP-CON CONFIGURED FOR YOUR INPUT]
+]
+
+]&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="9" name="macros-timing" tags="macros" position="0,700" size="100,100">{ &lt;!-- timing macros --&gt;
+
+(set: $replace_after to (macro: num-type _delay, string-type _hook, any-type _data, [
+&lt;!-- setup for a time fired event --&gt;
+(live: _delay)[(stop:)(replace: (hooks-named: _hook))[_data]]
+
+(output:)[]
+]))
+
+(set: $append_after to (macro: num-type _delay, string-type _hook, any-type _data, [
+&lt;!-- setup for a time fired event --&gt;
+(live: _delay)[(stop:)(append: (hooks-named: _hook))[_data]]
+
+(output:)[]
+]))
+
+} &lt;!-- --&gt;</tw-passagedata><tw-passagedata pid="10" name="Fourth Test" tags="" position="350,350" size="100,100">{ &lt;!-- story --&gt;
+
+= dice test = &lt;br&gt;&lt;br&gt;
+
+- nominal rolls -&lt;br&gt;
+(for: each _i, ...(range: 1,20))[
+(print: ($roll_nominal:)), 
+]&lt;br&gt;&lt;br&gt;
+
+- lucky rolls -&lt;br&gt;
+(for: each _i, ...(range: 1,20))[
+(print: ($roll_lucky:)), 
+]&lt;br&gt;&lt;br&gt;
+
+- unlucky rolls -&lt;br&gt;
+(for: each _i, ...(range: 1,20))[
+(print: ($roll_unlucky:)), 
+]&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="11" name="macros-dice" tags="macros" position="0,500" size="100,100">{ &lt;!-- dice macros --&gt;
+
+(set: $classify_roll to (macro:
+num-type _roll, [
+(set: _result to &quot;-&quot;)
+
+(if: _result &gt;= 20)[
+	(set: _result to &quot;++&quot;)
+] (else-if: _result &gt;= 10)[
+	(set: _result to &quot;+&quot;)
+]
+
+(output-data: _result)
+]))
+
+(set: $roll_nominal to (macro: [
+&lt;!-- standard lancer roll --&gt;
+(set: _roll to (random: 1, 20))
+(output-data: (_roll))
+]))
+
+(set: $roll_lucky to (macro: [
+&lt;!-- best of two d20 --&gt;
+(set: _roll1 to (random: 1,20))
+(set: _roll2 to (random: 1,20))
+(output-data: (max: _roll1, _roll2))
+]))
+
+(set: $roll_unlucky to (macro: [
+&lt;!-- worst of two d20 --&gt;
+(set: _roll1 to (random: 1,20))
+(set: _roll2 to (random: 1,20))
+(output-data: (min: _roll1, _roll2))
+]))
+
+} &lt;!-- dice macros --&gt;</tw-passagedata><tw-passagedata pid="12" name="Fifth Test" tags="" position="550,350" size="100,100">{ &lt;!-- story --&gt;
+
+= date test =&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;phase -= 1&quot;)[($prev_phase:)]]
+
+|button&gt;[(link-repeat: &quot;phase += 1&quot;)[($next_phase:)]]
+
+($set_date: 10, 3)
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="13" name="macros-date" tags="macros" position="0,400" size="100,100">{ &lt;!-- date macros --&gt;
+
+&lt;!-- 1 indexed array --&gt;
+(set: $phase_names to (a:
+&quot;early morning&quot;,
+&quot;late morning&quot;,
+&quot;noon&quot;,
+&quot;afternoon&quot;,
+&quot;evening&quot;,
+&quot;night&quot;
+))
+
+(set: $set_date to (macro:
+num-type _day,
+num-type _phase, [
+(set: $date_day to _day)
+(set: $date_phase to _phase)
+
+(rerun: ?gameheader)(output:)[]
+]))
+
+(set: $prev_phase to (macro: [
+(set: $date_phase to $date_phase - 1)
+(if: $date_phase &lt;= 0) [
+	(set: $date_phase to 6)(set: $date_day to $date_day - 1)
+]
+
+(rerun: ?gameheader)(output:)[]
+]))
+
+(set: $next_phase to (macro: [
+(set: $date_phase to $date_phase + 1)
+(if: $date_phase &gt;= 7) [
+	(set: $date_phase to 1)(set: $date_day to $date_day + 1)
+]
+
+(rerun: ?gameheader)(output:)[]
+]))
+
+
+} &lt;!-- date macros --&gt;</tw-passagedata><tw-passagedata pid="14" name="Sixth Test" tags="" position="750,350" size="100,100">{ &lt;!-- story --&gt;
+
+(set: $save to
+&quot;0010000100011000111011011110110010000110001000010000100001000110001110110111101101100011100010000100&quot;)
+(set: $save to &quot;000001111110000000000000000000000011111111100000000000000000000111111111110000001110000000011111111111110000010011000000110011001100111100011001100000100101010101010110001100100000101101011101111010000100100000101111111111111010011100111000100011100000001010100011000110110111000010100101001111110010111101100000000101011000111001011100110000001100111011111101001100111111111000011010001011011100011111010000011111111000011110001110110000111000001000111111000001100000111111110000111111111111111001111110000000111110000000111111111100000000111100000000011111111100000000111100000000011111111000000000&quot;)
+
+|console&gt;[
+&lt;div id=&quot;nonogram&quot;&gt;&lt;/div&gt;&lt;br&gt;
+
+`[left]` fix value to 1 — `[right]` fix value to 0&lt;br&gt;
+]&lt;br&gt;&lt;br&gt;
+
+&lt;!-- initialize nonogram --&gt;
+&lt;script&gt;window.nng.init(1)&lt;/script&gt;
+
+|button&gt;[(link-repeat: &quot;nng1()&quot;)
+[&lt;script&gt;window.nng.init(1)&lt;/script&gt;]]
+
+|button&gt;[(link-repeat: &quot;nng2()&quot;)
+[&lt;script&gt;window.nng.init(2)&lt;/script&gt;]]
+
+|button&gt;[(link-repeat: &quot;export()&quot;)
+[&lt;script&gt;
+let data = window.nng.export();
+console.log(data);
+$save = data;
+&lt;/script&gt;]]
+
+|button&gt;[(link-repeat: &quot;import()&quot;)
+[&lt;script&gt;
+let data = $save;
+console.log(data);
+window.nng.import(data);
+&lt;/script&gt;]]
+
+} &lt;!-- story --&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
