@@ -3,13 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Style Test</title>
+<title>The Last Report</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 50%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0.25) 0%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Style Test.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Style Test" startnode="2" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="82F91A54-4311-4D01-B458-DB6DC6D2AC60" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* font families for UI */
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Last Report.</tw-noscript></noscript></tw-story>
+<tw-storydata name="The Last Report" startnode="19" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="82F91A54-4311-4D01-B458-DB6DC6D2AC60" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/**************
+  general CSS 
+**************/
+
+/* font families for UI */
 
 @font-face {
     font-family: 'FontUI';
@@ -22,238 +26,286 @@
 }
 
 @font-face {
-  	font-family: 'FontTerminal';
-  	src: url('https://andras-szoldatics.github.io/the-final-report/assets/fonts/SpaceMono-Bold.ttf');
+    font-family: 'FontTerminal';
+    src: url('https://andras-szoldatics.github.io/the-final-report/assets/fonts/SpaceMono-Bold.ttf');
 }
 
 /* color palette for UI */
 
 :root {
-  	--bg-story: #221e1f;
-  	--bg-passage: #2a2a2a;
-  	--bg-terminal: #030712;
-  
-  	--text-bright: #f9fafb;
-  	--text-normal: #d1d6d8;
-  	--text-dim: #949899;
-  	--text-terminal: #10b981;
-  	
-  	--lancer-dark-red: #991b1b;
-   	--lancer-normal-red: #c22025;
+    --bg-story: #221e1f;
+    --bg-passage: #2a2a2a;
+    --bg-terminal: #030712;
+
+    --text-bright: #f9fafb;
+    --text-normal: #d1d6d8;
+    --text-dim: #949899;
+    --text-terminal: #10b981;
+
+    --lancer-dark-red: #991b1b;
+    --lancer-normal-red: #c22025;
 }
 
-/* screen based sizing, use 'rem' */
+/* screen based sizing, use 'rem' later */
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 @media (min-width: 2400px) {
-	html {
-	  	font-size: 24px;
-	}
+    html {
+        font-size: 24px;
+    }
 }
 
 @media (min-width: 3600px) {
-	html {
-	  	font-size: 32px;
-	}
+    html {
+        font-size: 32px;
+    }
 }
 
-/* configure some Harlowe blocks */
+/*******************
+  Harlowe blocks
+*******************/
+
+/* tw-story */
 
 tw-story {
-  	background: var(--bg-story);
-  	padding: 0vh 20vw;
+    background: var(--bg-story);
+    padding: 0vh 20vw;
 }
 
 tw-passage {
-  	background: var(--bg-passage);
-  	color: var(--text-normal);
-  	font-family: FontText;
-  	font-size: 1rem;
-  	height: 100vh;
-  	line-height: 1.5rem;
+    background: var(--bg-passage);
+    color: var(--text-normal);
+    font-family: FontText;
+    font-size: 1rem;
+    height: 100vh;
+    line-height: 1.5rem;
     overflow-y: auto;
-  	padding: 0rem 2rem;
+    padding: 0rem 2rem;
 }
 
 tw-passage[tags~=title] {
-  	padding: 0rem 8rem;
-  	text-align: center;
+    padding: 0rem 8rem;
+    text-align: center;
 }
 
+/* tw-sidebar */
+
 tw-sidebar {
-  	all: unset;
-  	bottom: 0rem;
-  	right: 0rem;
-  	position: fixed;
-  	text-align: left;
-  	width: 4rem;
+    all: unset;
+    bottom: 0rem;
+    right: 0rem;
+    position: fixed;
+    text-align: left;
+    width: 4rem;
 }
 
 tw-sidebar tw-icon {
-  	all: unset;
-  	color: var(--text-dim);
-  	display: inline-block;
-  	font-size: 4rem;
-  	line-height: 6rem;
-  	opacity: 1.0 !important;
-  	user-select: none;
+    all: unset;
+    color: var(--text-dim);
+    display: inline-block;
+    font-size: 4rem;
+    line-height: 6rem;
+    opacity: 1.0 !important;
+    user-select: none;
 }
 
 tw-sidebar tw-icon:hover {
-  	color: var(--text-bright) !important;
-  	opacity: 1.0 !important;
-  	user-select: none;
+    color: var(--text-bright) !important;
+    opacity: 1.0 !important;
+    user-select: none;
 }
 
+/* tw-link */
+
 tw-link {
-  	all: inherit;
-  	cursor: pointer;
-  	user-select: none;
+    all: inherit;
+    cursor: pointer;
+    user-select: none;
 }
 
 tw-link:hover {
-  	all: inherit;
-  	cursor: pointer;
-  	user-select: none;
+    all: inherit;
+    cursor: pointer;
+    user-select: none;
 }
 
 tw-hook[name=linktext] tw-link {
-  	color: var(--lancer-dark-red);
+    color: var(--lancer-dark-red);
 }
 
 tw-hook[name=linktext] tw-link:hover {
-  	color: var(--lancer-normal-red);
+    color: var(--lancer-normal-red);
 }
 
 tw-hook[name=button] tw-link {
-  	background: var(--lancer-dark-red);
-  	color: var(--text-normal);
-  	font-family: FontUI,monospace;
-  	padding: 0.5em;
+    background: var(--lancer-dark-red);
+    color: var(--text-normal);
+    font-family: FontUI, monospace;
+    padding: 0.5em;
 }
 
 tw-hook[name=button] tw-link:hover {
-  	background: var(--lancer-normal-red);
-  	color: var(--text-bright);
+    background: var(--lancer-normal-red);
+    color: var(--text-bright);
 }
 
 tw-hook[name=buttonoff] tw-link {
-  	background: var(--bg-story);
-  	color: var(--text-dim);
-  	font-family: FontUI,sansserif;
-  	padding: 0.5em;
+    background: var(--bg-story);
+    color: var(--text-dim);
+    font-family: FontUI, sansserif;
+    padding: 0.5em;
 }
 
-tw-hook[name=console] {
-  	background: var(--bg-terminal);
-  	color: var(--text-terminal);
-  	display: inline-block;
-  	font-family: FontTerminal,monospace;
-  	padding: 1rem;
-  	width: 100%
-}
+/* tw-expression */
 
-tw-hook[name=gametitle] {
-  	background: var(--lancer-dark-red);
-  	color: var(--text-normal);
-  	display: inline-block;
-  	font-family: FontUI,monospace;
-  	line-height: 1.5rem;
-  	margin-top: 12rem;
-  	margin-bottom: 8rem;
-  	padding: 2rem;
-    text-align: center;
-  	width: 100%
-}
-
-tw-hook[name=gameheader] {
-  	background: var(--lancer-dark-red);
-  	color: var(--text-normal);
-  	display: block;
-  	font-family: FontUI,monospace;
-  	font-size: 2rem;
-  	line-height: 2rem;
-  	margin-left: -2rem;
-  	margin-right: -2rem;
-  	margin-bottom: 2rem;
-  	padding-bottom: 1rem;
-  	padding-top: 1rem;
-}
-
-tw-hook[name=gametitle] tw-hook[name=main] {
-  	font-size: 4rem !important;
-  	line-height: 4rem !important;
-}
-
-tw-hook[name=gametitle] tw-hook[name=sub] {
-  	font-size: 1rem;
-  	line-height: 1rem;
-}
-
-tw-hook[name=gamemenu] {
-  	font-size: 2rem;
-  	line-height: 3rem;
-}
-
-tw-expression[name=force-input]  {
-  	all: unset;
-  	display: inline !important;
-  	border-style: none !important;
+tw-expression[name=force-input] {
+    all: unset;
+    display: inline !important;
+    border-style: none !important;
 }
 
 tw-expression[name=force-input] input {
-  	all: unset;
-  	border-bottom: 0.0625rem dashed;
-  	width: calc(100% - 12rem) !important;
+    all: unset;
+    border-bottom: 0.0625rem dashed;
+    width: calc(100% - 12rem) !important;
 }
 
+/* tw-hook */
+
+tw-hook[name=gameheader] {
+    background: var(--lancer-dark-red);
+    color: var(--text-normal);
+    display: block;
+    font-family: FontUI, monospace;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+tw-hook[name=gametitle] {
+    background: var(--lancer-dark-red);
+    color: var(--text-normal);
+    display: inline-block;
+    font-family: FontUI, monospace;
+    line-height: 1.5rem;
+    margin-top: 12rem;
+    margin-bottom: 8rem;
+    padding: 2rem;
+    text-align: center;
+    width: 100%
+}
+
+tw-hook[name=gametitle] tw-hook[name=main] {
+    font-size: 4rem !important;
+    line-height: 4rem !important;
+}
+
+tw-hook[name=gametitle] tw-hook[name=sub] {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+tw-hook[name=gamemenu] {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+tw-hook[name=console] {
+    background: var(--bg-terminal);
+    color: var(--text-terminal);
+    display: inline-block;
+    font-family: FontTerminal, monospace;
+    padding: 1rem;
+    width: 100%
+}
+
+tw-hook[name=block] {
+    border: 0.0625rem solid var(--lancer-dark-red);
+    border-left: 0.5rem solid var(--lancer-dark-red);
+    color: var(--text-dim);
+    display: inline-block;
+    font-family: FontTerminal, monospace;
+    padding: 0.25rem 0.5rem;
+}
+
+tw-hook[name=interview] {
+    border-bottom: 0.5rem solid var(--lancer-dark-red);
+    color: var(--text-bright);
+    display: inline-block;
+    line-height: 0rem;
+}
+
+tw-hook[name=interview] img {
+    border-top: 0.5rem solid var(--lancer-dark-red);
+    border-left: 0.5rem solid var(--lancer-dark-red);
+    border-right: 0.5rem solid var(--lancer-dark-red);
+    display: inline-block;
+    height: 8rem;
+    width: 8rem;
+}
+
+tw-hook[name=interview] div {
+    display: inline-block;
+    padding: 1rem 10rem 1rem 1rem;
+    line-height: 1.5rem;
+    vertical-align: top;
+}
+
+/********************
+  nonogram elements
+********************/
+
 #nonogram {
-  	display: inline-block;
+    display: inline-block;
 }
 
 #nonogram table {
-  	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 #nonogram td {
-  	border: 1px dotted;
-  	border-color: var(--text-terminal);
-  	cursor: pointer;
-  	height: 1.5rem;
-  	padding: 0rem;
-  	user-select: none;
-  	width: 1.5rem;
+    border: 1px dotted;
+    border-color: var(--text-terminal);
+    cursor: pointer;
+    height: 1.5rem;
+    padding: 0rem;
+    user-select: none;
+    width: 1.5rem;
 }
 
 #nonogram td.active {
-  	background: var(--text-terminal);
+    background: var(--text-terminal);
 }
 
 #nonogram td.inactive {
-  	line-height: 1.375rem;
-  	text-align: center;
+    line-height: 1.375rem;
+    text-align: center;
 }
 
 #nonogram td.inactive::after {
-  	content: '\00B7';
+    content: '\00B7';
 }
 
 #nonogram th {
-  	user-select: none;
+    user-select: none;
 }
 
 #nonogram th.row {
-  	font-weight: normal;
+    font-weight: normal;
     padding: 0rem 0.5rem;
     text-align: left;
     white-space: nowrap;
 }
 
 #nonogram th span.clue {
-  	cursor: pointer;
+    cursor: pointer;
 }
 
 #nonogram th span.disable {
@@ -261,11 +313,11 @@ tw-expression[name=force-input] input {
 }
 
 #nonogram th.row span.sep {
-  	padding: 0rem 0.25rem;
+    padding: 0rem 0.25rem;
 }
 
 #nonogram th.col {
-  	font-weight: normal;
+    font-weight: normal;
     padding: 0.5rem 0rem;
     text-align: center;
     vertical-align: bottom;
@@ -280,11 +332,11 @@ tw-expression[name=force-input] input {
 }
 
 #nonogram .thick-right {
-  	border-right: 0.125rem dotted var(--text-terminal);
+    border-right: 0.125rem dotted var(--text-terminal);
 }
 
 #nonogram .thick-bottom {
-  	border-bottom: 0.125rem dotted var(--text-terminal);
+    border-bottom: 0.125rem dotted var(--text-terminal);
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.nng = {};
 
 window.nng1 = {
@@ -383,14 +435,14 @@ window.nng2 = {
     },
 };
 
-window.nng.flipClue = function (event) {
+window.nng.flipClue = function(event) {
     event.preventDefault();
 
     const span = event.target;
     span.classList.toggle("disable");
 };
 
-window.nng.leftClick = function (event) {
+window.nng.leftClick = function(event) {
     event.preventDefault();
 
     const cell = event.target;
@@ -402,7 +454,7 @@ window.nng.leftClick = function (event) {
     }
 };
 
-window.nng.rightClick = function (event) {
+window.nng.rightClick = function(event) {
     event.preventDefault();
 
     const cell = event.target;
@@ -414,7 +466,7 @@ window.nng.rightClick = function (event) {
     }
 };
 
-window.nng.init = function (puzzle) {
+window.nng.init = function(puzzle) {
     const container = document.getElementById("nonogram");
     const config = puzzle === 1 ? window.nng1 : window.nng2;
 
@@ -537,7 +589,7 @@ window.nng.init = function (puzzle) {
     container.appendChild(table);
 };
 
-window.nng.export = function () {
+window.nng.export = function() {
     const container = document.getElementById("nonogram");
 
     const table = container.querySelector("table");
@@ -563,7 +615,7 @@ window.nng.export = function () {
     return state;
 };
 
-window.nng.import = function (state) {
+window.nng.import = function(state) {
     const container = document.getElementById("nonogram");
 
     const table = container.querySelector("table");
@@ -588,86 +640,87 @@ window.nng.import = function (state) {
         }
     });
 };
-</script><tw-tag name="title" color="green"></tw-tag><tw-tag name="header" color="red"></tw-tag><tw-tag name="startup" color="yellow"></tw-tag><tw-tag name="footer" color="blue"></tw-tag><tw-tag name="no-header" color="red"></tw-tag><tw-tag name="module-macros" color="yellow"></tw-tag><tw-tag name="macros" color="yellow"></tw-tag><tw-passagedata pid="1" name="First Test" tags="" position="300,200" size="100,100">{ &lt;!-- story --&gt;
 
-(set: _entry1 to &quot;&quot;)
-(set: _entry2 to &quot;&quot;)
+window.nng.validate = function(solution) {
+    // generate current state
+    const current = window.nng.export();
 
-This is some basic paragraph.&lt;br&gt;&lt;br&gt;
+    // compare: every 1 must match
+    for (let i = 0; i < solution.length; i++) {
+        if (solution[i] === "1") {
+            if (current[i] !== "1") {
+                return false;
+            }
+        }
+    }
 
-This is a slightly longer paragraph.&lt;br&gt;&lt;br&gt;
+    return true;
+}
 
-This is a really long paragraph. — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;&lt;br&gt;
+window.nng.check = function(solution) {
+    // generate current state
+    const current = window.nng.export();
 
-= test some links =&lt;br&gt;&lt;br&gt;
-|linktext&gt;[(link-repeat: &quot;link&quot;)[(append: ?linktext)[+]]]
-|linkninja&gt;[(link-repeat: &quot;linkninja&quot;)[(append: ?linkninja)[+]]]&lt;br&gt;&lt;br&gt;
-|button&gt;[(link-repeat: &quot;button&quot;)[(append: ?button)[+]]]
-|buttonoff&gt;[(link-repeat: &quot;buttonoff&quot;)[(append: ?buttonoff)[+]]]&lt;br&gt;
+    let errors = 0;
+    // compare: only defined values must match
+    for (let i = 0; i < solution.length; i++) {
+        if (solution[i] === "1") {
+            if (current[i] === "0") {
+                errors += 1;
+            }
+        } else if (solution[i] === "0") {
+            if (current[i] === "1") {
+                errors += 1;
+            }
+        }
+    }
 
-} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="2" name="Title Screen" tags="title no-header" position="100,200" size="100,100">{ &lt;!-- game menu --&gt;
+    console.log("# of errors: " + errors);
+    return errors;
+};
 
-|gametitle&gt;[
-|main&gt;[The Final Report]&lt;br&gt;
-|sub&gt;[a Delta Lance Horizon Story]
-]&lt;br&gt;&lt;br&gt;
+window.nng.repair = function(solution) {
+    // limit the # of errors fixed
+    const errors = window.nng.check(solution);
+    if (errors >= 5) {
+        return -1;
+    } else if (errors === 0) {
+        return 0;
+    }
 
-|gamemenu&gt;[
+    const container = document.getElementById("nonogram");
+    const table = container.querySelector("table");
 
-|button&gt;[(link-repeat: &quot;Start Investigation&quot;)[
-($new_analyst:)
-($new_investigation:)
-(go-to: &quot;First Test&quot;))]
-]&lt;br&gt;&lt;br&gt;
+    if (!table) {
+        return -1;
+    }
 
-|buttonoff&gt;[(link-repeat: &quot;Load from Checkpoint&quot;)[]]&lt;br&gt;&lt;br&gt;
+    const cells = table.querySelectorAll("td");
 
-|button&gt;[(link-repeat: &quot;version-and-credits&quot;)[]]&lt;br&gt;&lt;br&gt;
+    cells.forEach((cell) => {
+        let s = solution[cell.dataset.ix - 1];
 
-]
+        // fix only the specifically wrong cells, unmarked cells are left alone
+        if (s === "1" && cell.classList.contains("inactive")) {
+            cell.classList.remove("inactive");
+        } else if (s === "0" && cell.classList.contains("active")) {
+            cell.classList.remove("active");
+        }
+    });
 
-} &lt;!-- game menu --&gt;</tw-passagedata><tw-passagedata pid="3" name="module-header" tags="header" position="200,0" size="100,100">{
+    return 1;
+};</script><tw-tag name="title" color="green"></tw-tag><tw-tag name="header" color="red"></tw-tag><tw-tag name="startup" color="yellow"></tw-tag><tw-tag name="footer" color="blue"></tw-tag><tw-tag name="no-header" color="red"></tw-tag><tw-tag name="module-macros" color="yellow"></tw-tag><tw-tag name="macros" color="yellow"></tw-tag><tw-tag name="test" color="purple"></tw-tag><tw-tag name="story" color="green"></tw-tag><tw-passagedata pid="1" name="macros-character" tags="macros" position="400,0" size="100,100">{ &lt;!-- character macros --&gt;
 
-(if: (passage:)&#39;s tags does not contain &quot;no-header&quot;) [
-
-|gameheader&gt;[
-=|
-&lt;==
-the $ability Analyst
-
-|=
-==&gt;
-(nth: $date_phase, ...$phase_names) — day $date_day
-
-|==|
-&lt;==
-]
-
-]
-
-}</tw-passagedata><tw-passagedata pid="4" name="module-startup" tags="startup" position="0,0" size="100,100">{
-
-&lt;!-- include custom macros --&gt;
-(display: &quot;macros-date&quot;)
-(display: &quot;macros-dice&quot;)
-(display: &quot;macros-story&quot;)
-(display: &quot;macros-timing&quot;)
-
-&lt;!-- set basic phase --&gt;
-(set: $date_phase to 1)
-(set: $save to &quot;&quot;)
-
-}</tw-passagedata><tw-passagedata pid="5" name="module-footer" tags="footer" position="300,0" size="100,100">{ &lt;!-- sidebar config --&gt;
-
-(replace: ?sidebar)[(icon-restart:)(icon-fullscreen:)]
-
-} &lt;!-- sidebar config --&gt;
----
-|button&gt;[[[1st-&gt;First Test]]] |button&gt;[[[2nd-&gt;Second Test]]] |button&gt;[[[3rd-&gt;Third Test]]] |button&gt;[[[4th-&gt;Fourth Test]]] |button&gt;[[[5th-&gt;Fifth Test]]] |button&gt;[[[6th-&gt;Sixth Test]]]</tw-passagedata><tw-passagedata pid="6" name="macros-story" tags="macros" position="0,600" size="100,100">{ &lt;!-- story macros --&gt;
+(set: $abilities to (a:
+&quot;Unremarkable&quot;,
+&quot;Diligent&quot;,
+&quot;Emphatic&quot;,
+&quot;Lucky&quot;
+))
 
 (set: $new_analyst to (macro: [
 &lt;!-- ability --&gt;
-(set: $ability to &quot;Unremarkable&quot;)
+(set: $ability to 1)
 
 &lt;!-- terminal data --&gt;
 (set: $term_user to &quot;analyst-d30ffa01@intel.ucs &quot;)
@@ -676,139 +729,7 @@ the $ability Analyst
 (output:)[]
 ]))
 
-(set: $new_investigation to (macro: [
-&lt;!-- dates --&gt;
-(set: $date_day to 0)
-(set: $date_phase to 5)
-
-&lt;!-- humint --&gt;
-(set: $humint to (dm:))
-
-&lt;!-- sigint --&gt;
-(set: $sigint to (dm:))
-
-(output:)[]
-]))
-
-} &lt;!-- story macros --&gt;</tw-passagedata><tw-passagedata pid="7" name="Second Test" tags="" position="500,200" size="100,100">{ &lt;!-- story --&gt;
-
-= delay test =&lt;br&gt;&lt;br&gt;
-
-|derp&gt;[]&lt;br&gt;&lt;br&gt;
-
-($replace_after: 4000ms, &quot;derp&quot;, [derp-derp])
-
-|button&gt;[(link-repeat: &quot;!!!&quot;)[
-($append_after: 500ms, &quot;derp&quot;, [ !!!])
-]]&lt;br&gt;
-
-} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="8" name="Third Test" tags="" position="700,200" size="100,100">{ &lt;!-- story --&gt;
-
-= console test =&lt;br&gt;&lt;br&gt;
-
-|console&gt;[
-(set: _entry1 to &quot;&quot;)
-(set: _entry2 to &quot;&quot;)
-
-|log1&gt;[&gt; INITIALIZING MAINFRAME&lt;br&gt;
-&gt; WAITING FOR AUTHENTICATION ...&lt;br&gt;]
-|entry1&gt;[(v6m-print: &quot;USER: &quot;)(force-input: bind _entry1, $term_user)&lt;br&gt;]
-|entry2&gt;[]
-|log2&gt;[]
-
-(event: when _entry1&#39;s length is &gt;= ($term_user)&#39;s length) [
-(replace: ?entry1)[USER: (v6m-print: $term_user)&lt;br&gt;]
-(replace: ?entry2)[(v6m-print: &quot;PASS: &quot;)(force-input: bind _entry2, $term_pass)&lt;br&gt;]
-]
-
-(event: when _entry2&#39;s length is &gt;=($term_pass)&#39;s length) [
-(replace: ?entry2)[PASS: (v6m-print: $term_pass)&lt;br&gt;]
-(replace: ?log2)[&gt; WELCOME ANALYST, COMP-CON CONFIGURED FOR YOUR INPUT]
-]
-
-]&lt;br&gt;
-
-} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="9" name="macros-timing" tags="macros" position="0,700" size="100,100">{ &lt;!-- timing macros --&gt;
-
-(set: $replace_after to (macro: num-type _delay, string-type _hook, any-type _data, [
-&lt;!-- setup for a time fired event --&gt;
-(live: _delay)[(stop:)(replace: (hooks-named: _hook))[_data]]
-
-(output:)[]
-]))
-
-(set: $append_after to (macro: num-type _delay, string-type _hook, any-type _data, [
-&lt;!-- setup for a time fired event --&gt;
-(live: _delay)[(stop:)(append: (hooks-named: _hook))[_data]]
-
-(output:)[]
-]))
-
-} &lt;!-- --&gt;</tw-passagedata><tw-passagedata pid="10" name="Fourth Test" tags="" position="350,350" size="100,100">{ &lt;!-- story --&gt;
-
-= dice test = &lt;br&gt;&lt;br&gt;
-
-- nominal rolls -&lt;br&gt;
-(for: each _i, ...(range: 1,20))[
-(print: ($roll_nominal:)), 
-]&lt;br&gt;&lt;br&gt;
-
-- lucky rolls -&lt;br&gt;
-(for: each _i, ...(range: 1,20))[
-(print: ($roll_lucky:)), 
-]&lt;br&gt;&lt;br&gt;
-
-- unlucky rolls -&lt;br&gt;
-(for: each _i, ...(range: 1,20))[
-(print: ($roll_unlucky:)), 
-]&lt;br&gt;
-
-} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="11" name="macros-dice" tags="macros" position="0,500" size="100,100">{ &lt;!-- dice macros --&gt;
-
-(set: $classify_roll to (macro:
-num-type _roll, [
-(set: _result to &quot;-&quot;)
-
-(if: _result &gt;= 20)[
-	(set: _result to &quot;++&quot;)
-] (else-if: _result &gt;= 10)[
-	(set: _result to &quot;+&quot;)
-]
-
-(output-data: _result)
-]))
-
-(set: $roll_nominal to (macro: [
-&lt;!-- standard lancer roll --&gt;
-(set: _roll to (random: 1, 20))
-(output-data: (_roll))
-]))
-
-(set: $roll_lucky to (macro: [
-&lt;!-- best of two d20 --&gt;
-(set: _roll1 to (random: 1,20))
-(set: _roll2 to (random: 1,20))
-(output-data: (max: _roll1, _roll2))
-]))
-
-(set: $roll_unlucky to (macro: [
-&lt;!-- worst of two d20 --&gt;
-(set: _roll1 to (random: 1,20))
-(set: _roll2 to (random: 1,20))
-(output-data: (min: _roll1, _roll2))
-]))
-
-} &lt;!-- dice macros --&gt;</tw-passagedata><tw-passagedata pid="12" name="Fifth Test" tags="" position="550,350" size="100,100">{ &lt;!-- story --&gt;
-
-= date test =&lt;br&gt;&lt;br&gt;
-
-|button&gt;[(link-repeat: &quot;phase -= 1&quot;)[($prev_phase:)]]
-
-|button&gt;[(link-repeat: &quot;phase += 1&quot;)[($next_phase:)]]
-
-($set_date: 10, 3)
-
-} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="13" name="macros-date" tags="macros" position="0,400" size="100,100">{ &lt;!-- date macros --&gt;
+} &lt;!-- character macros --&gt;</tw-passagedata><tw-passagedata pid="2" name="macros-date" tags="macros" position="500,0" size="100,100">{ &lt;!-- date macros --&gt;
 
 &lt;!-- 1 indexed array --&gt;
 (set: $phase_names to (a:
@@ -848,11 +769,245 @@ num-type _phase, [
 ]))
 
 
-} &lt;!-- date macros --&gt;</tw-passagedata><tw-passagedata pid="14" name="Sixth Test" tags="" position="750,350" size="100,100">{ &lt;!-- story --&gt;
+} &lt;!-- date macros --&gt;</tw-passagedata><tw-passagedata pid="3" name="macros-dice" tags="macros" position="600,0" size="100,100">{ &lt;!-- dice macros --&gt;
+(set: $die_size to 10)
 
-(set: $save to
+(set: $seed_die to (macro: [(set: _seed to &quot;&quot;)
+&lt;script&gt;
+let v = new Uint32Array(1);
+window.crypto.getRandomValues(v);
+_seed = v[0].toString();
+&lt;/script&gt;
+(seed: _seed)(output:)[]]))
+
+(set: $roll to (macro: [(output-data: (random: 1, $die_size))]))
+(set: $roll_lucky to (macro: [(output-data: (max: ($roll), ($roll)))]))
+(set: $roll_unlucky to (macro: [(output-data: (min: ($roll), ($roll)))]))
+
+(set: $classify_roll to (macro: num-type _roll, [
+(set: _result to &quot;-&quot;)
+(if: _roll &gt;= $die_size)[(set: _result to &quot;++&quot;)]
+(else-if: _roll &gt;= ($die_size / 2))[(set: _result to &quot;+&quot;)]
+(output-data: _result)]))
+
+} &lt;!-- dice macros --&gt;</tw-passagedata><tw-passagedata pid="4" name="macros-nng" tags="macros" position="700,0" size="100,100">{&lt;!-- nonogram macros --&gt;
+
+(set: $nng1 to
 &quot;0010000100011000111011011110110010000110001000010000100001000110001110110111101101100011100010000100&quot;)
-(set: $save to &quot;000001111110000000000000000000000011111111100000000000000000000111111111110000001110000000011111111111110000010011000000110011001100111100011001100000100101010101010110001100100000101101011101111010000100100000101111111111111010011100111000100011100000001010100011000110110111000010100101001111110010111101100000000101011000111001011100110000001100111011111101001100111111111000011010001011011100011111010000011111111000011110001110110000111000001000111111000001100000111111110000111111111111111001111110000000111110000000111111111100000000111100000000011111111100000000111100000000011111111000000000&quot;)
+
+(set: $nng2 to &quot;000001111110000000000000000000000011111111100000000000000000000111111111110000001110000000011111111111110000010011000000110011001100111100011001100000100101010101010110001100100000101101011101111010000100100000101111111111111010011100111000100011100000001010100011000110110111000010100101001111110010111101100000000101011000111001011100110000001100111011111101001100111111111000011010001011011100011111010000011111111000011110001110110000111000001000111111000001100000111111110000111111111111111001111110000000111110000000111111111100000000111100000000011111111100000000111100000000011111111000000000&quot;)
+
+}&lt;!-- nonogram macros --&gt;</tw-passagedata><tw-passagedata pid="5" name="macros-story" tags="macros" position="800,0" size="100,100">{ &lt;!-- story macros --&gt;
+
+(set: $new_investigation to (macro: [
+&lt;!-- dates --&gt;
+(set: $date_day to 0)
+(set: $date_phase to 5)
+
+&lt;!-- humint --&gt;
+(set: $humint to (dm:))
+
+&lt;!-- sigint --&gt;
+(set: $sigint to (dm:))
+
+(output:)[]
+]))
+
+(set: $dossier to (macro:
+array-type _data, [
+
+(set: _html to &quot;&lt;img alt=\&quot;.\&quot; src=\&quot;assets/img/&quot;)
+(set: _html to it +  _data&#39;s (1))
+(set: _html to it + &quot;\&quot;&gt;&lt;div&gt;&quot;)
+
+(set: _html to it + _data&#39;s (2))
+(set: _html to it + &quot;&lt;br&gt;&lt;br&gt;&quot;)
+
+(set: _html to it + _data&#39;s (3))
+(set: _html to it + &quot;&lt;br&gt;&quot;)
+
+(set: _html to it + _data&#39;s (4))
+(set: _html to it + &quot;&lt;/div&gt;&quot;)
+
+(output:)[_html]
+]))
+
+} &lt;!-- story macros --&gt;</tw-passagedata><tw-passagedata pid="6" name="macros-timing" tags="macros" position="900,0" size="100,100">{ &lt;!-- timing macros --&gt;
+
+(set: $replace_after to (macro: num-type _delay, string-type _hook, any-type _data, [
+&lt;!-- setup for a time fired event --&gt;
+(live: _delay)[(stop:)(replace: (hooks-named: _hook))[_data]]
+
+(output:)[]
+]))
+
+(set: $append_after to (macro: num-type _delay, string-type _hook, any-type _data, [
+&lt;!-- setup for a time fired event --&gt;
+(live: _delay)[(stop:)(append: (hooks-named: _hook))[_data]]
+
+(output:)[]
+]))
+
+} &lt;!-- --&gt;</tw-passagedata><tw-passagedata pid="7" name="module-footer" tags="footer" position="200,0" size="100,100">{ &lt;!-- sidebar config --&gt;
+
+(replace: ?sidebar)[(icon-restart:)(icon-fullscreen:)]
+
+} &lt;!-- sidebar config --&gt;</tw-passagedata><tw-passagedata pid="8" name="module-header" tags="header" position="100,0" size="100,100">{
+
+(if: (passage:)&#39;s tags does not contain &quot;no-header&quot;) [
+
+|gameheader&gt;[
+=|
+&lt;==
+the (print: $abilities&#39;s ($ability)) Analyst
+
+|=
+==&gt;
+(nth: $date_phase, ...$phase_names) — day $date_day
+
+|==|
+&lt;==
+]
+
+]
+
+}</tw-passagedata><tw-passagedata pid="9" name="module-startup" tags="startup" position="0,0" size="100,100">{
+
+&lt;!-- set basic nifo --&gt;
+(set: $ability to 1)
+(set: $date_phase to 1)
+
+&lt;!-- include custom macros --&gt;
+(display: &quot;macros-character&quot;)
+(display: &quot;macros-date&quot;)
+(display: &quot;macros-dice&quot;)
+(display: &quot;macros-nng&quot;)
+(display: &quot;macros-story&quot;)
+(display: &quot;macros-timing&quot;)
+
+}</tw-passagedata><tw-passagedata pid="10" name="new-character" tags="story" position="400,200" size="100,100">{&lt;!-- story --&gt;
+
+You force a breath, focusing on the message still displayed on your data slate.&lt;br&gt;&lt;br&gt;
+
+|console&gt;[... so I would like you to revisit the case with the number D-30FFA01.&lt;br&gt;&lt;br&gt;
+
+The initial investigation was inconclusive, but I believe with your skills, you might be able to shed some new light on the matter. You will have full access to all relevant files and personnel.&lt;br&gt;&lt;br&gt;
+
+I need your report by the end of the week, before noon.&lt;br&gt;&lt;br&gt;
+
+Presume nothing. Question everything.&lt;br&gt;&lt;br&gt;
+
+HAN Shuang-Yin&lt;br&gt;
+Chief of Intelligence
+]&lt;br&gt;&lt;br&gt;
+
+Nothing like unraveling some months-old, unsolved mystery to get you back to work. Yes, nothing relaxes the body and mind like unreasonable expectations and impossible deadlines. At least that&#39;s what your superiors must think, burdening you with this pile of garbage.&lt;br&gt;&lt;br&gt;
+
+But if nothing else, it&#39;s a distraction from your current predicament.&lt;br&gt;
+
+Besides, in circumstances like these, you were always exceptionally...&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;☕  diligent&quot;)[(set: $ability to 2)(rerun: ?gameheader)(show: ?button)(replace: ?summary)[
+&quot;Hard work, hardly works,&quot; or so the saying goes. Not for you. For you, it&#39;s the only thing that works. The price is just steep. After weeks of crunch time, the sleep debt accrues interest with every passing day. Hobbies fade, relationships fray, and your life narrows to the four corners of your work. But the job always gets done.
+]]]
+|button&gt;[(link-repeat: &quot;💬 emphatic&quot;)[(set: $ability to 3)(rerun: ?gameheader)(show: ?button)(replace: ?summary)[
+Even before your specialized training, people were an open book to you. Micro-expressions, body language, intonation, the slight pauses between words—they read as clear as day. You see the truth behind every smile and the resentment behind every agreement. It&#39;s a part of you that never  turns off, and it&#39;s why you’ve never had a real connection with anyone.
+]]]
+|button&gt;[(link-repeat: &quot;🍀 lucky&quot;)[(set: $ability to 4)(rerun: ?gameheader)(show: ?button)(replace: ?summary)[
+No one&#39;s ever managed to measure luck or fate, but that doesn&#39;t make your luck any less real. No matter how hairy a situation gets, you always walk away in one piece—usually. The flip side? Trouble finds you with unnatural frequency, and no matter how hard you work, your successes are routinely dismissed by others as just another &quot;lucky break&quot;.
+]
+]]&lt;br&gt;&lt;br&gt;
+
+|summary&gt;[]&lt;br&gt;&lt;br&gt;
+
+|button)[(link-repeat: &quot;try to sleep ➡️&quot;)[(set: $date_phase to 6)(go-to: &quot;rough-night&quot;))]]
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="11" name="test-1" tags="test" position="0,400" size="100,100">{ &lt;!-- story --&gt;
+
+(set: _entry1 to &quot;&quot;)
+(set: _entry2 to &quot;&quot;)
+
+This is some basic paragraph.&lt;br&gt;&lt;br&gt;
+
+This is a slightly longer paragraph.&lt;br&gt;&lt;br&gt;
+
+This is a really long paragraph. — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;&lt;br&gt;
+
+= test some links =&lt;br&gt;&lt;br&gt;
+|linktext&gt;[(link-repeat: &quot;link&quot;)[(append: ?linktext)[+]]]
+|linkninja&gt;[(link-repeat: &quot;linkninja&quot;)[(append: ?linkninja)[+]]]&lt;br&gt;&lt;br&gt;
+|button&gt;[(link-repeat: &quot;button&quot;)[(append: ?button)[+]]]
+|buttonoff&gt;[(link-repeat: &quot;buttonoff&quot;)[(append: ?buttonoff)[+]]]&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="12" name="test-2" tags="test" position="0,500" size="100,100">{ &lt;!-- story --&gt;
+
+= delay test =&lt;br&gt;&lt;br&gt;
+
+|derp&gt;[]&lt;br&gt;&lt;br&gt;
+
+($replace_after: 2000ms, &quot;derp&quot;, [derp-derp])
+
+|button&gt;[(link-repeat: &quot;!!!&quot;)[
+($append_after: 500ms, &quot;derp&quot;, [ !!!])
+]]&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="13" name="test-3" tags="test" position="0,600" size="100,100">{ &lt;!-- story --&gt;
+($new_analyst:)
+
+= console test =&lt;br&gt;&lt;br&gt;
+
+|console&gt;[
+(set: _entry1 to &quot;&quot;)
+(set: _entry2 to &quot;&quot;)
+
+|log1&gt;[&gt; INITIALIZING MAINFRAME&lt;br&gt;
+&gt; WAITING FOR AUTHENTICATION ...&lt;br&gt;]
+|entry1&gt;[(v6m-print: &quot;USER: &quot;)(force-input: bind _entry1, $term_user)&lt;br&gt;]
+|entry2&gt;[]
+|log2&gt;[]
+
+(event: when _entry1&#39;s length is &gt;= ($term_user)&#39;s length) [
+(replace: ?entry1)[USER: (v6m-print: $term_user)&lt;br&gt;]
+(replace: ?entry2)[(v6m-print: &quot;PASS: &quot;)(force-input: bind _entry2, $term_pass)&lt;br&gt;]
+]
+
+(event: when _entry2&#39;s length is &gt;=($term_pass)&#39;s length) [
+(replace: ?entry2)[PASS: (v6m-print: $term_pass)&lt;br&gt;]
+(replace: ?log2)[&gt; WELCOME ANALYST, COMP-CON CONFIGURED FOR YOUR INPUT]
+]
+
+]&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="14" name="test-4" tags="test" position="0,700" size="100,100">{ &lt;!-- story --&gt;
+
+= dice test = &lt;br&gt;&lt;br&gt;
+|seed&gt;[]&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;save()&quot;)[(save-game: &quot;rng&quot;)]]
+|button&gt;[(link-repeat: &quot;load()&quot;)[(load-game: &quot;rng&quot;)]]
+|button&gt;[(link-repeat: &quot;roll()&quot;)[
+(replace: ?roll)[]
+
+(for: each _ix, ...(range: 1,10)) [
+(if: _ix is not 1)[(append: ?roll)[`, `]]
+(append: ?roll)[($roll:)]]
+]
+]
+&lt;br&gt;&lt;br&gt;
+
+|roll&gt;[]
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="15" name="test-5" tags="test" position="100,400" size="100,100">{ &lt;!-- story --&gt;
+
+= date test =&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;phase -= 1&quot;)[($prev_phase:)]]
+
+|button&gt;[(link-repeat: &quot;phase += 1&quot;)[($next_phase:)]]
+
+($set_date: 10, 3)
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="16" name="test-6" tags="test" position="100,500" size="100,100">{ &lt;!-- story --&gt;
 
 |console&gt;[
 &lt;div id=&quot;nonogram&quot;&gt;&lt;/div&gt;&lt;br&gt;
@@ -863,27 +1018,111 @@ num-type _phase, [
 &lt;!-- initialize nonogram --&gt;
 &lt;script&gt;window.nng.init(1)&lt;/script&gt;
 
-|button&gt;[(link-repeat: &quot;nng1()&quot;)
-[&lt;script&gt;window.nng.init(1)&lt;/script&gt;]]
+|button&gt;[(link-repeat: &quot;nng1()&quot;)[&lt;script&gt;window.nng.init(1)&lt;/script&gt;]]
+|button&gt;[(link-repeat: &quot;nng2()&quot;)[&lt;script&gt;window.nng.init(2)&lt;/script&gt;]]
 
-|button&gt;[(link-repeat: &quot;nng2()&quot;)
-[&lt;script&gt;window.nng.init(2)&lt;/script&gt;]]
+|button&gt;[(link-repeat: &quot;import()&quot;)[
+&lt;script&gt;let data = $nng2;console.log(data);window.nng.import(data);&lt;/script&gt;
+]]
 
-|button&gt;[(link-repeat: &quot;export()&quot;)
-[&lt;script&gt;
-let data = window.nng.export();
-console.log(data);
-$save = data;
-&lt;/script&gt;]]
+|button&gt;[(link-repeat: &quot;validate()&quot;)[
+(set: _done to false)
+&lt;script&gt;let data = $nng2;_done = window.nng.validate(data);&lt;/script&gt;
+(if: _done)[(replace: ?summary)[Puzzle Complete!]]
+(else:)[(replace: ?summary)[Puzzle Incomplete...]]
+]]
 
-|button&gt;[(link-repeat: &quot;import()&quot;)
-[&lt;script&gt;
-let data = $save;
-console.log(data);
-window.nng.import(data);
-&lt;/script&gt;]]
+|button&gt;[(link-repeat: &quot;check()&quot;)[
+(set: _errors to 0)
+&lt;script&gt;let data = $nng2;_errors = window.nng.check(data);&lt;/script&gt;
+(replace: ?summary)[# of errors: (print: _errors)]
+]]
 
-} &lt;!-- story --&gt;</tw-passagedata></tw-storydata>
+|button&gt;[(link-repeat: &quot;repair()&quot;)[
+(set: _repairs to 0)
+&lt;script&gt;let data = $nng2;_repairs = window.nng.repair(data);&lt;/script&gt;
+(replace: ?summary)[# of repairs: (print: _repairs)]
+]]
+
+&lt;br&gt;&lt;br&gt;|summary&gt;[]
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="17" name="test-7" tags="test" position="100,600" size="100,100">{ &lt;!-- story --&gt;
+
+|button&gt;[(link-repeat: &quot;leave the page ➡️&quot;)[]]
+&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;🎲 nominal roll&quot;)[]]
+|button&gt;[(link-repeat: &quot;🎲✨ lucky roll&quot;)[]]
+|button&gt;[(link-repeat: &quot;🎲💀 unlucky roll&quot;)[]]
+&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;💬 empathic action&quot;)[]]
+|button&gt;[(link-repeat: &quot;☕ diligent action&quot;)[]]
+|button&gt;[(link-repeat: &quot;🍀 lucky action&quot;)[]]
+&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;🔑 secret route&quot;)[]]
+&lt;br&gt;&lt;br&gt;
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="18" name="test-8" tags="test" position="100,700" size="100,100">{ &lt;!-- story --&gt;
+
+derp-derp?&lt;br&gt;
+derp-derp!
+&lt;br&gt;&lt;br&gt;
+
+|block&gt;[🎲 = 10 : critical success] derp |block&gt;[🎲 = 5 : success]&lt;br&gt;
+|block&gt;[🎲 = 1 : failure] Hope not.&lt;br&gt;
+|block&gt;[Is this working?] ... who knows?&lt;br&gt;&lt;br&gt;
+
+|interview&gt;[($dossier: (a: &quot;Elsbeth PETROSYAN.png&quot;, &quot;Elsbeth PETROSYAN&quot;,&quot;Deputy Head of Logistics&quot;, &quot;Prodigy of Star System Logistics&quot;))]&lt;br&gt;&lt;br&gt;
+
+&quot;So, what the fuck do you want here? We don&#39;t like your types here... you know, weasels.&quot;&lt;br&gt;&lt;br&gt;
+
+
+
+} &lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="19" name="title-screen" tags="title no-header" position="100,200" size="100,100">{ &lt;!-- game menu --&gt;
+
+|gametitle&gt;[
+|main&gt;[The Final Report]&lt;br&gt;
+|sub&gt;[a Delta Lance Horizon Story]
+]&lt;br&gt;&lt;br&gt;
+
+|gamemenu&gt;[
+
+|button&gt;[(link-repeat: &quot;Start Investigation&quot;)[
+($new_analyst:)($new_investigation:)
+(go-to: &quot;intro&quot;)
+]]&lt;br&gt;&lt;br&gt;
+
+|buttonoff&gt;[(link-repeat: &quot;Load from Checkpoint&quot;)[]]&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-repeat: &quot;Credits&quot;)[]]&lt;br&gt;&lt;br&gt;
+
+]
+
+} &lt;!-- game menu --&gt;
+---
+&lt;!-- testing buttons here --&gt;
+|button&gt;[(link-goto: &quot;1st&quot;, &quot;test-1&quot;)] |button&gt;[(link-goto: &quot;2nd&quot;, &quot;test-2&quot;)] |button&gt;[(link-goto: &quot;3rd&quot;, &quot;test-3&quot;)] |button&gt;[(link-goto: &quot;4th&quot;, &quot;test-4&quot;)] |button&gt;[(link-goto: &quot;5th&quot;, &quot;test-5&quot;)] |button&gt;[(link-goto: &quot;6th&quot;, &quot;test-6&quot;)] |button&gt;[(link-goto: &quot;7th&quot;, &quot;test-7&quot;)] |button&gt;[(link-goto: &quot;8th&quot;, &quot;test-8&quot;)]</tw-passagedata><tw-passagedata pid="20" name="intro" tags="story" position="325,200" size="100,100">{&lt;!-- story --&gt;
+
+You pace the confines of your newly assigned quarters, a cage of clean, sterile metal. An unending pressure thrums behind your eyes — a strange two-way pull between complete exhaustion and a restless, jagged energy. Usually, you shook off the aftereffects of stasis easily. This is the price for spending the last decade in suspended animation, but the Doc promised it would pass in a few days, at most.&lt;br&gt;&lt;br&gt;
+
+You glance towards your data slate, lying on a nearby desk.&lt;br&gt;&lt;br&gt;
+
+|console&gt;[DATE: 5035U—10—14&lt;br&gt;
+UT: 11:45:27 — ST: 18:56:45]&lt;br&gt;&lt;br&gt;
+
+The numbers in the corner offer some comfort, unlike the message below them.&lt;br&gt;&lt;br&gt;
+
+|button&gt;[(link-goto: &quot;look at the message, again ➡️&quot;, &quot;new-character&quot;)]
+
+}&lt;!-- story --&gt;</tw-passagedata><tw-passagedata pid="21" name="rough-night" tags="story" position="500,200" size="100,100">{&lt;!-- story --&gt;
+
+You sleep bad. But you slept, so that&#39;s something.&lt;br&gt;&lt;br&gt;
+
+Your adventure reached an end, for now.
+
+}&lt;!-- story --&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
